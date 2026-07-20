@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${companyName} + ' | Digital Company'">MYM Studio | Digital Company</title>
+    <meta name="description" content="브랜드, 웹서비스, 디지털 경험을 설계하고 구현하는 트렌디한 회사 홈페이지입니다.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css">
+    <script defer th:src="@{/js/main.js}" src="/js/main.js"></script>
+</head>
+<body>
+<header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="홈으로 이동">
+        <span class="brand-mark">M</span>
+        <span th:text="${companyName}">MYM Studio</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" data-nav-toggle>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="site-nav" data-nav>
+        <a href="#about">About</a>
+        <a href="#services">Service</a>
+        <a href="#works">Works</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main id="top">
+    <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+            <div class="mesh mesh-a"></div>
+            <div class="mesh mesh-b"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <p class="eyebrow">Digital Strategy & Experience Design</p>
+            <h1>브랜드가 돋보이는 디지털 경험을 만듭니다.</h1>
+            <p class="hero-copy">기획, 디자인, 개발, 운영까지 한 흐름으로 연결해 회사의 다음 성장을 위한 웹사이트와 서비스를 구축합니다.</p>
+            <div class="hero-actions">
+                <a class="button primary" href="#contact">프로젝트 문의</a>
+                <a class="button secondary" href="#works">작업 보기</a>
+            </div>
+        </div>
+        <aside class="hero-panel" aria-label="회사 핵심 지표">
+            <div>
+                <strong>48+</strong>
+                <span>Launched Projects</span>
+            </div>
+            <div>
+                <strong>92%</strong>
+                <span>Client Retention</span>
+            </div>
+            <div>
+                <strong>3.2x</strong>
+                <span>Average Growth</span>
+            </div>
+        </aside>
+    </section>
+
+    <section class="section intro" id="about">
+        <div class="section-heading">
+            <p class="eyebrow">Who We Are</p>
+            <h2>전략과 실행을 함께 보는 컴팩트한 디지털 팀</h2>
+        </div>
+        <p class="section-copy">복잡한 요구사항을 명확한 화면과 안정적인 서비스 구조로 바꿉니다. 스타트업, 로컬 브랜드, B2B 기업까지 각 비즈니스의 맥락에 맞는 웹 경험을 설계합니다.</p>
+    </section>
+
+    <section class="section service-section" id="services">
+        <div class="section-heading">
+            <p class="eyebrow">Services</p>
+            <h2>회사 홈페이지에 필요한 핵심 구성</h2>
+        </div>
+        <div class="service-grid">
+            <article class="service-card">
+                <span>01</span>
+                <h3>Brand Website</h3>
+                <p>기업 소개, 비전, 팀, 채용, 문의 흐름을 브랜드 톤에 맞게 설계합니다.</p>
+            </article>
+            <article class="service-card">
+                <span>02</span>
+                <h3>Product Landing</h3>
+                <p>제품과 서비스의 장점을 빠르게 이해시키는 전환 중심 랜딩 페이지를 만듭니다.</p>
+            </article>
+            <article class="service-card">
+                <span>03</span>
+                <h3>Admin & CMS</h3>
+                <p>공지, 포트폴리오, 문의 내역을 관리할 수 있는 운영 기능까지 확장합니다.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section works" id="works">
+        <div class="section-heading">
+            <p class="eyebrow">Selected Works</p>
+            <h2>산업과 목적에 맞춘 프로젝트 구조</h2>
+        </div>
+        <div class="work-list">
+            <article class="work-item">
+                <div>
+                    <p>Corporate</p>
+                    <h3>테크 기업 리브랜딩 웹사이트</h3>
+                </div>
+                <span>Strategy / UI / Spring Boot</span>
+            </article>
+            <article class="work-item">
+                <div>
+                    <p>Commerce</p>
+                    <h3>프리미엄 브랜드 제품 쇼케이스</h3>
+                </div>
+                <span>UX / Frontend / Analytics</span>
+            </article>
+            <article class="work-item">
+                <div>
+                    <p>Platform</p>
+                    <h3>B2B 서비스 소개 및 문의 퍼널</h3>
+                </div>
+                <span>Design System / Backend</span>
+            </article>
+        </div>
+    </section>
+
+    <section class="section process">
+        <div class="section-heading">
+            <p class="eyebrow">Process</p>
+            <h2>빠르게 시작하고 명확하게 완성합니다</h2>
+        </div>
+        <ol class="process-list">
+            <li><strong>Discover</strong><span>목표, 고객, 콘텐츠 구조 정의</span></li>
+            <li><strong>Design</strong><span>반응형 화면과 브랜드 톤 설계</span></li>
+            <li><strong>Build</strong><span>Spring Boot 기반 구현과 배포 준비</span></li>
+            <li><strong>Grow</strong><span>운영 데이터 기반 개선</span></li>
+        </ol>
+    </section>
+
+    <section class="contact-band" id="contact">
+        <p class="eyebrow">Start a Project</p>
+        <h2>회사 이야기를 더 선명하게 보여줄 준비가 됐나요?</h2>
+        <a class="button primary" href="mailto:hello@mymstudio.kr">hello@mymstudio.kr</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <span th:text="${companyName}">MYM Studio</span>
+    <span>Seoul, Korea</span>
+    <span>© 2026 All rights reserved.</span>
+</footer>
+</body>
+</html>
